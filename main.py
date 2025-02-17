@@ -1,7 +1,7 @@
-def hi()
+def hi():
   print("HI")
 
-def bye()
+def bye():
   print("BYE")
 
 print(hi())
