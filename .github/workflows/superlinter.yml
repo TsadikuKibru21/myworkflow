@@ -1,0 +1,27 @@
+name: Super-Linter
+on: 
+  push:
+    branches:
+      - main  # Change this to your default branch if different
+
+jobs: 
+  super-lint:
+    name: Lint Base Code
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Specify the version you need
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # You can specify the language you want to lint, or leave it to lint all
+          LINTER_RULES_PATH: .github/linter.yml  # Path to your custom rules file (optional)
