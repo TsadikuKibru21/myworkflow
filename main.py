@@ -1,7 +1,11 @@
 def hi():
-  print("HI")
+    print("HI")
+
+
 
 def bye():
-  print("BYE")
+    print("BYE")
+
+
 
 print(hi())
