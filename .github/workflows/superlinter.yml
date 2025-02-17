@@ -22,6 +22,3 @@ jobs:
         uses: github/super-linter@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          # You can specify the language you want to lint, or leave it to lint all
-          LINTER_RULES_PATH: .github/linter.yml  # Path to your custom rules file (optional)
